@@ -14,10 +14,10 @@ cart.forEach((cartItem)=>{
             matchingProduct=product;
         }
       }); 
-    const deliveryOptionId=cartItem.deliveryOptionId;
+    const deliveryOptionId=cartItem.deliveryOptionsId;
     const deliveryOption = getDeliveryOption(deliveryOptionId);
     const today=dayjs();
-    const deliveryDate=today.add(deliveryOption.deliveryDays,'days');//deliveryDays is unidentified and can't solve the problem
+    const deliveryDate=today.add(deliveryOption.deliveryDays,'days');
     const dateString=deliveryDate.format('dddd, MMMM D')
 
     
